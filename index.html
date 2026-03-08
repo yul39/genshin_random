@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Genshin_random</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+    <h1>Genshin_random</h1>
+
+    <button id="roll">🎲 랜덤 굴리기</button>
+     
+    
+    <div id="party">
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+
+        <div class="divider"></div>
+
+        <div class="boss-area">
+            <div class="boss"></div>
+        </div>
+    </div>
+
+    <div id="result"></div>
+
+   <input type="text" id="search" placeholder="캐릭터 검색..">
+
+   <div class="top-controls">
+    <label class="default-toggle" title="기본적인 캐릭터를 자동으로 선택합니다.">
+    <input type="checkbox" id="defaultPick">
+    기본 캐릭터 선택
+    </label>
+
+   <div class ="character-controls">
+        <button id="selectAll">전체 선택</button>
+    </div>
+ </div>
+   
+
+    <div id="characters"></div>
+    <div id="characterList"></div>
+
+    <script src="script.js"></script>
+    
+    </body>
+</html>
