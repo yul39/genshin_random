@@ -338,11 +338,12 @@ selectAllBtn.onclick = () => {
    const selected = document.querySelectorAll(".character.selected");
 
    if (selected.length > 0) {
-      
-      characters.forEach(c => c.classList.remove("selected"));
+      characters.forEach(c => {
+         if(c.characterList.contains("locked")) return;
+         c.classList.remove("selected");
+      });
       selectAllBtn.textContent = "전체 선택";
    } else {
-
       characters.forEach(c => c.classList.add("selected"));
       selectAllBtn.textContent = "전체 해제";
    }
