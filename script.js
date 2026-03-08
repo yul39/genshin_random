@@ -339,7 +339,7 @@ selectAllBtn.onclick = () => {
 
    if (selected.length > 0) {
       characters.forEach(c => {
-         if(c.characterList.contains("locked")) return;
+         if(btn.characterList.contains("locked")) return;
          c.classList.remove("selected");
       });
       selectAllBtn.textContent = "전체 선택";
@@ -367,4 +367,5 @@ defaultPick.onchange = () => {
          btn.classList.remove("locked");
       });
    }
+
 };
