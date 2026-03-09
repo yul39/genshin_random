@@ -182,6 +182,8 @@ const defaultCharacters = [
    "케이아",
    "리사",
    "바바라",
+   "향릉",
+   "노엘",
    "카치나",
    "아이노",
    "리넷",
@@ -335,37 +337,41 @@ const selectAllBtn = document.getElementById("selectAll");
 selectAllBtn.onclick = () => {
 
    const characters = document.querySelectorAll(".character");
-   const selected = document.querySelectorAll(".character.selected");
 
-   if (selected.length > 0) {
+   const allSelected = [...characters].every(c =>
+      c.classList.contains("selected") || c.classList.contains("locked")
+   );
+   if(allSelected){
       characters.forEach(c => {
-         if(btn.characterList.contains("locked")) return;
-         c.classList.remove("selected");
+         if(!c.classList.contains("locked")){
+            c.classList.remove("selected");
+         }
       });
       selectAllBtn.textContent = "전체 선택";
    } else {
-      characters.forEach(c => c.classList.add("selected"));
+      characters.forEach(c => {
+         c.classList.add("selected");
+      });
       selectAllBtn.textContent = "전체 해제";
    }
 
 };
 
-
-const defaultPick = document.getElementById("defaultPick");
 defaultPick.onchange = () => {
    const characters = document.querySelectorAll(".character");
-   if(defaultPick.checked) {
-      characters.forEach(btn => {
-         if(defaultCharacters.includes(btn.dataset.name)){
-            btn.classList.add("selected");
-            btn.classList.add("locked");
+   if(defaultPick.checked){
+      characters.forEach(c => {
+         if(defaultCharacters.includes(c.dataset.name)){
+            c.classList.add("selected");
+            c.classList.add("locked"); 
          }
       });
    } else {
-      document.querySelectorAll(".character.locked").forEach(btn=>{
-         btn.classList.remove("selected");
-         btn.classList.remove("locked");
+      characters.forEach(c => {
+         if(c.classList.contains("locked")){
+            c.classList.remove("locked");
+            c.classList.remove("selected");
+         }
       });
    }
-
 };
