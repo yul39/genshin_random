@@ -109,6 +109,11 @@ const characters = [
 { name:"콜롬비나", id:"J2TvTNB"},
 { name:"일루가", id:"sE0gaby"},
 { name:"자백", id:"EUHuxTe"},
+{ name:"린네아", id:"xo5dZkb"},
+{ name:"니콜", id:"ydQDnH0"},
+{ name:"프루네", id:"fQXP0b8"},
+{ name:"로엔", id:"PHnZuIu"},
+{ name:"산드로네", id:"Cpx2KVZ"},
 { name:"바르카", id:"YVTm9rF"},
 { name:"바람행자", id:"zhTJiTj"},
 { name:"바위행자", id:"izk0r7T"},
@@ -167,7 +172,25 @@ const bosses = [
 { name:"용암룡 형상", id:"qghIn54"},
 { name:"달빛 환영 나비", id:"7Sha5t2"},
 { name:"달빛 바위 도마뱀붙이", id:"ttSTRyj"},
-{ name:"어둠의 악몽 영주", id:"32FDaXr"}
+{ name:"어둠의 악몽 영주", id:"32FDaXr"},
+{ name:"파수꾼 · 타락", id:"5oShffZ"}
+];
+
+const weeklyBosses = [
+{ name:"열공의 마룡", id:"Op9zZCv"},
+{ name:"북풍의 왕랑", id:"i5noNl5"},
+{ name:"문 앞의 체스 매치", id:"aSBJova"},
+{ name:"「타르탈리아」", id:"wCF0AZd"},
+{ name:"야타용왕", id:"b48ngky"},
+{ name:"「시뇨라」", id:"ZYGG0E3"},
+{ name:"마가츠 미타케 나루카미노 미코토", id:"uGli7cp"},
+{ name:"칠엽 적조의 비밀주", id:"kf1PQAc"},
+{ name:"아펩의 오아시스 파수꾼", id:"hzIpHJm"},
+{ name:"알 낳는 도토레", id:"5T0XMt0"},
+{ name:"별을 삼킨 고래", id:"gxRPLVo"},
+{ name:"「아를레키노」", id:"mqJECaR"},
+{ name:"침식된 근원의 불꽃 주인", id:"iysc4md"},
+{ name:"「도토레」", id:"No3Gs5W"}
 ];
 
 // imgur 링크 생성
@@ -282,6 +305,9 @@ const presets = {
       "일루가",
       "자백",
       "바르카",
+      "니콜",
+      "로엔",
+      "프루네",
       "바람행자",
       "바위행자",
       "번개행자",
@@ -375,7 +401,10 @@ const presets = {
       "번개별인형",
       "풀 별인형",
       "물 별인형",
-      "불 별인형"
+      "불 별인형",
+      "니콜",
+      "로엔",
+      "바르카"
    ],
    서리: [
       "엠버",
@@ -461,6 +490,8 @@ const presets = {
       "에스코피에",
       "차스카",
       "나비아",
+      "로엔",
+      "프루네"
    ],
 }
 
@@ -559,16 +590,25 @@ rollButton.onclick = () => {
  });
 
  // 보스 랜덤
- const boss = bosses[Math.floor(Math.random()*bosses.length)];
 
- const bossSlot = document.querySelector(".boss");
+let bossPool = [...bosses];
 
- bossSlot.innerHTML = `
- <div class="character-box">
-  <img src="${getImage(boss.id)}" width="80" height="80">
-  <div class="character-name">${boss.name}</div>
- </div>
- `;
+const weeklyToggle = document.getElementById("weeklyBoss");
+
+if (weeklyToggle.checked) {
+   bossPool = bossPool.concat(weeklyBosses);
+}
+
+const boss = bossPool[Math.floor(Math.random() * bossPool.length)];
+
+const bossSlot = document.querySelector(".boss");
+
+bossSlot.innerHTML = `
+<div class="character-box">
+ <img src="${getImage(boss.id)}" width="80" height="80">
+ <div class="character-name">${boss.name}</div>
+</div>
+`;
 
 };
 

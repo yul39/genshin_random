@@ -47,6 +47,22 @@ body {
     background: black;
 }
 
+.roll-wrapper{
+    position: relative;
+    text-align: center;
+}
+
+#roll{
+    display: inline-block;
+}
+
+.weekly-toggle{
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .boss-area {
     display: flex;
     align-items: center;
