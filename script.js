@@ -178,7 +178,7 @@ const bosses = [
 { name:"달빛 바위 도마뱀붙이", id:"ttSTRyj"},
 { name:"어둠의 악몽 영주", id:"32FDaXr"},
 { name:"파수꾼 · 타락", id:"5oShffZ"},
-{ name:"날개 사자 키메", id:"D2Au5tv"},
+{ name:"날개 사자 키메라", id:"D2Au5tv"},
 { name:"불멸의 부산물", id:"ATQDdUe"}
 ];
 
