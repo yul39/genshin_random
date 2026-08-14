@@ -115,18 +115,22 @@ const characters = [
 { name:"프루네", id:"fQXP0b8"},
 { name:"로엔", id:"PHnZuIu"},
 { name:"산드로네", id:"Cpx2KVZ"},
+{ name:"오데트", id:"MUNJPkI"},
+{ name:"알료샤", id:"Jg87dpJ"},
 { name:"바람행자", id:"zhTJiTj"},
 { name:"바위행자", id:"izk0r7T"},
 { name:"번개행자", id:"4br4o2Z"},
 { name:"풀행자", id:"l6MqlPf"},
 { name:"물행자", id:"uKzs8Bn"},
 { name:"불행자", id:"0X6GvuG"},
+{ name:"얼음행자", id:"0favJTQ"},
 { name:"바람별인형", id:"FiUDZLv"},
 { name:"바위별인형", id:"EfMSM70"},
 { name:"번개별인형", id:"UZcOdtq"},
 { name:"풀 별인형", id:"oaSzohO"},
 { name:"물 별인형", id:"9DfloEc"},
-{ name:"불 별인형", id:"6hl73l5"}
+{ name:"불 별인형", id:"6hl73l5"},
+{ name:"얼음 별인형", id:"16WHglO"},
 ];
 
 const bosses = [
@@ -173,7 +177,9 @@ const bosses = [
 { name:"달빛 환영 나비", id:"7Sha5t2"},
 { name:"달빛 바위 도마뱀붙이", id:"ttSTRyj"},
 { name:"어둠의 악몽 영주", id:"32FDaXr"},
-{ name:"파수꾼 · 타락", id:"5oShffZ"}
+{ name:"파수꾼 · 타락", id:"5oShffZ"},
+{ name:"날개 사자 키메", id:"D2Au5tv"},
+{ name:"불멸의 부산물", id:"ATQDdUe"}
 ];
 
 const weeklyBosses = [
