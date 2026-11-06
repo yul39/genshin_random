@@ -117,6 +117,8 @@ const characters = [
 { name:"산드로네", id:"Cpx2KVZ"},
 { name:"오데트", id:"MUNJPkI"},
 { name:"알료샤", id:"Jg87dpJ"},
+{ name:"미탸", id:"5Ef85ae"},
+ { name:"발레리", id:"2Pyes0k"},
 { name:"바람행자", id:"zhTJiTj"},
 { name:"바위행자", id:"izk0r7T"},
 { name:"번개행자", id:"4br4o2Z"},
@@ -179,11 +181,12 @@ const bosses = [
 { name:"어둠의 악몽 영주", id:"32FDaXr"},
 { name:"파수꾼 · 타락", id:"5oShffZ"},
 { name:"날개 사자 키메라", id:"D2Au5tv"},
-{ name:"불멸의 부산물", id:"ATQDdUe"}
+{ name:"불멸의 부산물", id:"ATQDdUe"},
+{ name:"방랑하는 눈의 수호자", id:"kYf3xXI"},
+{ name:"고래 닻잡이", id:"Sk8pGdt"},
 ];
 
 const weeklyBosses = [
-{ name:"열공의 마룡", id:"Op9zZCv"},
 { name:"북풍의 왕랑", id:"i5noNl5"},
 { name:"문 앞의 체스 매치", id:"aSBJova"},
 { name:"「타르탈리아」", id:"wCF0AZd"},
@@ -331,6 +334,9 @@ const presets = {
       "클레",
       "오데트",
       "알료샤",
+      "바레사",
+      "미탸",
+      "발레리",
    ],
    제이: [
       "엠버",
@@ -415,12 +421,15 @@ const presets = {
       "불 별인형",
       "니콜",
       "로엔",
-      "바르카"
+      "바르카",
       "얼음 별인형",
       "얼음행자",
       "오데트",
       "알료샤",
-      "야에 미코"
+      "야에 미코",
+      "미탸",
+      "발레리",
+      "백출",
    ],
    서리: [
       "엠버",
@@ -515,6 +524,9 @@ const presets = {
       "라이오슬리",
       "오데트",
       "알료샤",
+      "미탸",
+      "발레리",
+      "클로린드",
    ],
 }
 
